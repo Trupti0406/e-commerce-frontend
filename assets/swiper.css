@@ -1,0 +1,34 @@
+.slide-container {
+  width: 100%;
+  padding: 10px 0;
+}
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+}
+.swiper-navBtn {
+  color: #febd69;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover {
+  color: #f79210;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 35px;
+}
+.swiper-button-next {
+  right: 0;
+}
+.swiper-button-prev {
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+  /* .swiper-navBtn {
+    display: none;
+  } */
+}

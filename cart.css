@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.mainContainer {
+  flex-wrap: wrap;
+}
+
+.items {
+  /* border: 1px solid blue; */
+  background-color: white;
+  /* border: 2px solid #f79210; */
+  border-radius: 6px;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+}
+
+.items-row {
+  border-top: 1px solid gray;
+}
+.column {
+  height: 400px;
+  background-color: blue;
+}
+.items .card-header {
+  /* background-color: #f79210; */
+  border-radius: 6px 6px 0 0 !important;
+  border: 1px solid rgb(0, 0, 0, 0.175);
+  background-color: #ffcc8a !important;
+}
+.card-header:first-child {
+  background-color: #ffcc8a;
+}
+.q-text {
+  margin-top: -12px;
+}
+.innercols {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.total-cost {
+  background-color: #ffcc8a;
+}
+
+.cart-img {
+  height: 180px;
+  width: 180px;
+}
+.mainContainer button {
+  background-color: #ffcc8a;
+  padding: 5px 12px;
+  font-weight: bolder;
+  border-radius: 6px;
+  border: none;
+}
+.mainContainer button:hover,
+.mainContainer .btn:hover {
+  background-color: #f79210;
+}
+
+.mainContainer .btn {
+  background-color: #ffcc8a;
+}
+
+.mainContainer input {
+  border: 2px solid #f79210;
+}
+
+/* To hide the increse-decrese arrows of input number field */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+@media only screen and (max-width: 600px) {
+  .cart-img {
+    height: 120px;
+    width: 120px;
+  }
+  .items-row {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+  .summary {
+    padding: 0px 60px;
+  }
+}

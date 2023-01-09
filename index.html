@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E Store</title>
+    <!-- Bootstrap Links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Swiper CDN Links -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom CSS Files -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/swiper.css" />
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("./assets/header.html");
+        $("#footer").load("./assets/footer.html");
+      });
+    </script>
+  </head>
+  <body class="bg-light">
+    <!-- Header -->
+    <div id="header"></div>
+    <!-- Home Page Component -->
+    <div class="home">
+      <div class="banner-container">
+        <img
+          src="https://www.pacificmalls.in/dehradun/images/slider/520931583426037slider.jpg"
+          alt="Banner Image of Clothing store"
+          class="banner-img"
+        />
+        <div class="banner-logo">
+          <img src="/logo.png" alt="" />
+        </div>
+        <p>
+          Clothes that talk on behalf of you. Something for every occassion.
+        </p>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <h2 class="fw-bolder py-3 px-5 text-center">Shop for all categories</h2>
+    <div
+      class="categories d-flex align-items-center justify-content-around flex-wrap"
+    >
+      <div
+        class="women d-flex flex-column justify-content-center align-items-center p-1"
+      >
+        <a href="./product pages/women/womenAll.html">
+          <img
+            src="https://images.pexels.com/photos/6069555/pexels-photo-6069555.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+            alt=""
+            class="category-img"
+          />
+        </a>
+
+        <h4 class="py-3 fw-bold">Women</h4>
+      </div>
+      <div
+        class="men d-flex flex-column justify-content-center align-items-center p-1"
+      >
+        <a href="./product pages/men/menAll.html">
+          <img
+            src="https://images.pexels.com/photos/5935754/pexels-photo-5935754.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+            class="category-img"
+          />
+        </a>
+        <h4 class="py-3 fw-bold">Men</h4>
+      </div>
+      <div
+        class="kids d-flex flex-column justify-content-center align-items-center p-1"
+      >
+        <a href="./product pages/kids.html">
+          <img
+            src="https://images.pexels.com/photos/35188/child-childrens-baby-children-s.jpg?auto=compress&cs=tinysrgb&w=600"
+            alt=""
+            class="category-img"
+          />
+        </a>
+        <h4 class="py-3 fw-bold">Kids</h4>
+      </div>
+    </div>
+
+    <!-- Featured Products Components -->
+    <div class="featured mb-5">
+      <h2 class="fw-bolder py-3 px-5">Featured Products:</h2>
+      <div class="slide-container swiper">
+        <div class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+              <img
+                src="https://m.media-amazon.com/images/I/71WmwSot-vL._AC_UL320_.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold p-1">Black T-shirt</h5>
+                <p class="price fw-semibold h5">₹ 659</p>
+                <p class="card-text">
+                  Allen Solly Men's Plain Regular Fit Polo T-shirt, available in
+                  all sizes
+                </p>
+                <button class="add-cart d-flex align-items-center">
+                  <i class="add-to-cart fa-solid fa-cart-shopping"></i>
+                  <a href="#" class="btn fw-bold">Add To Cart</a>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <img
+                src="https://m.media-amazon.com/images/I/61XnG8ZA3lL._AC_UL320_.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold p-1">Floral Pink Dress</h5>
+                <p class="price fw-semibold h5">₹ 1439</p>
+                <p class="card-text">
+                  Women's Polyester comfortable A-Line Knee-Length, sleevless
+                  Dress
+                </p>
+                <button class="add-cart d-flex align-items-center">
+                  <i class="add-to-cart fa-solid fa-cart-shopping"></i>
+                  <a href="#" class="btn fw-bold">Add To Cart</a>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <img
+                src="https://m.media-amazon.com/images/I/8129Xn87GsL._AC_UL320_.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold p-1">Formal Suit</h5>
+                <p class="price fw-semibold h5">₹ 4159</p>
+                <p class="card-text">
+                  Wool Blend Unisex Full Sleeve Slim FIT Medium Blue Formal Suit
+                </p>
+                <button class="add-cart d-flex align-items-center">
+                  <i class="add-to-cart fa-solid fa-cart-shopping"></i>
+                  <a href="#" class="btn fw-bold">Add To Cart</a>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <img
+                src="https://m.media-amazon.com/images/I/51NZaOmbZAL._SX679._SX._UX._SY._UY_.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold p-1">Pyjama-Tshirt set</h5>
+                <p class="price fw-semibold h5">₹ 549</p>
+                <p class="card-text">
+                  Printed Bear Cartoon, Baby Clothing Set Stripe Pyjama Tshirt
+                  Pant
+                </p>
+                <button class="add-cart d-flex align-items-center">
+                  <i class="add-to-cart fa-solid fa-cart-shopping"></i>
+                  <a href="#" class="btn fw-bold">Add To Cart</a>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <img
+                src="https://m.media-amazon.com/images/I/51mF7diIunL._UX679_.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold p-1">Cotton Hoodie</h5>
+                <p class="price fw-semibold h5">₹ 999</p>
+                <p class="card-text text-wrap">
+                  Alan Jones Clothing, Colorblocked Unisex Hoodies Sweatshirt
+                </p>
+                <button class="add-cart d-flex align-items-center">
+                  <i class="add-to-cart fa-solid fa-cart-shopping"></i>
+                  <a href="#" class="btn fw-bold">Add To Cart</a>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <img
+                src="https://m.media-amazon.com/images/I/61kqhTCKtgL._AC_UL320_.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold p-1">Baby Flannel</h5>
+                <p class="price fw-semibold h5">₹ 664</p>
+                <p class="card-text">
+                  BRANDONN Unisex Baby Flannel Jumpsuit Panda Style Cosplay
+                  Clothes.
+                </p>
+                <button class="add-cart d-flex align-items-center">
+                  <i class="add-to-cart fa-solid fa-cart-shopping"></i>
+                  <a href="#" class="btn fw-bold">Add To Cart</a>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <img
+                src="https://m.media-amazon.com/images/I/61ZG-r4cGHL._SX466_.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold p-1">Surgicals Suit</h5>
+                <p class="price fw-semibold h5">₹ 714</p>
+                <p class="card-text">
+                  Surgicals Unisex Scrub Suit set V-Neck 3 Pocket Top and Cargo
+                  Type Trouser
+                </p>
+                <button class="add-cart d-flex align-items-center">
+                  <i class="add-to-cart fa-solid fa-cart-shopping"></i>
+                  <a href="#" class="btn fw-bold">Add To Cart</a>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <img
+                src="https://m.media-amazon.com/images/I/31IDm87JoTS._SX300_SY300_QL70_FMwebp_.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold p-1">Face Mask</h5>
+                <p class="price fw-semibold h5">₹ 199</p>
+                <p class="card-text">
+                  Lee Cooper Lightweight Cotton Face Mask for Outdoor
+                  Protection.
+                </p>
+                <button class="add-cart d-flex align-items-center">
+                  <i class="add-to-cart fa-solid fa-cart-shopping"></i>
+                  <a href="#" class="btn fw-bold">Add To Cart</a>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <img
+                src="https://m.media-amazon.com/images/I/71lOb02ErwL._UY741_.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold p-1">Kurta Palazzo set</h5>
+                <p class="price fw-semibold h5">₹ 1647</p>
+                <p class="card-text">
+                  Miss Ethnik Women's Faux Georgette Semi Stitched Top With
+                  Stitched Faux.
+                </p>
+                <button class="add-cart d-flex align-items-center">
+                  <i class="add-to-cart fa-solid fa-cart-shopping"></i>
+                  <a href="#" class="btn fw-bold">Add To Cart</a>
+                </button>
+              </div>
+            </div>
+            <div class="card swiper-slide">
+              <img
+                src="https://m.media-amazon.com/images/I/41hTiBWvtDL.jpg"
+                class="card-img-top"
+                alt="Product Image"
+              />
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold p-1">Checked Skirt</h5>
+                <p class="price fw-semibold h5">₹ 1249</p>
+                <p class="card-text text-wrap">
+                  Black Checked Front Knot, Buttoned, Below Knee Length, a- line
+                  Skirt
+                </p>
+                <button class="add-cart d-flex align-items-center">
+                  <i class="add-to-cart fa-solid fa-cart-shopping"></i>
+                  <a href="#" class="btn fw-bold">Add To Cart</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+    <!-- Swiper Js -->
+    <script src="./assets/swiper.js"></script>
+    <!-- Cart JS -->
+    <script src="./cart.js"></script>
+  </body>
+</html>
