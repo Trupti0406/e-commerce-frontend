@@ -127,6 +127,9 @@ footer a {
   box-shadow: #f79210 5px 5px 5px 5px;
 }
 
+.category-img:hover {
+   transform: scale(1.1);
+}
 /* =============== Feautured Products =============== */
 .card {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
