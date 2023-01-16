@@ -19,7 +19,7 @@ let products = [
     id: "kids1",
     name: "Jacket",
     price: "599",
-    description: "Black Kids Polyester Blend Winter Wear Jackets with cap.",
+    // description: "Black Kids Polyester Blend Winter Wear Jackets with cap.",
     image: "https://m.media-amazon.com/images/I/81TLGPPXpxL._AC_UL320_.jpg",
     incart: 0,
   },
@@ -27,7 +27,7 @@ let products = [
     id: "kids2",
     name: "Pink Dress",
     price: "849",
-    description: "Doodle Girl's Dress, Frock for Girls, Round Neck.",
+    // description: "Doodle Girl's Dress, Frock for Girls, Round Neck.",
     image: "https://m.media-amazon.com/images/I/71B+9RXeyoS._UY741_.jpg",
     incart: 0,
   },
@@ -36,7 +36,7 @@ let products = [
     id: "kids3",
     name: "Tee",
     price: "303",
-    description: " Fashionably printed, bright color, regular fit, t-shirt.",
+    // description: " Fashionably printed, bright color, regular fit, t-shirt.",
     image:
       "https://m.media-amazon.com/images/I/817qiPvaCKL._SY500._SX._UX._SY._UY_.jpg",
     incart: 0,
@@ -45,7 +45,7 @@ let products = [
     id: "kids4",
     name: "Night Suit",
     price: "799",
-    description: "Kids blue Cotton Printed Pyjama Set Pack of 1",
+    // description: "Kids blue Cotton Printed Pyjama Set Pack of 1",
     image: "https://m.media-amazon.com/images/I/71C4Q55SQAL._AC_UL320_.jpg",
     incart: 0,
   },
@@ -53,7 +53,7 @@ let products = [
     id: "kids5",
     name: "Dress",
     price: "1499",
-    description: "Curly Tale's girls cotton dress with 1 frock 1 jacket.",
+    // description: "Curly Tale's girls cotton dress with 1 frock 1 jacket.",
     image: "https://m.media-amazon.com/images/I/818UbIhYbML._UX679_.jpg",
     incart: 0,
   },
@@ -61,7 +61,7 @@ let products = [
     id: "kids6",
     name: "Jumpsuit",
     price: "799",
-    description: " Midi Type Dungaree with Denim Separate Hosiery T-shirt",
+    // description: " Midi Type Dungaree with Denim Separate Hosiery T-shirt",
     image: "https://m.media-amazon.com/images/I/81P7ODspaJL._UY741_.jpg",
     incart: 0,
   },
@@ -69,7 +69,7 @@ let products = [
     id: "kids7",
     name: "dress",
     price: "999",
-    description: "Fashion Dream Girls Calf Length Pleated green Dress",
+    // description: "Fashion Dream Girls Calf Length Pleated green Dress",
     image: "https://m.media-amazon.com/images/I/61UIDB6j96L._UY741_.jpg",
     incart: 0,
   },
@@ -77,7 +77,7 @@ let products = [
     id: "kids8",
     name: "Baby Flannel",
     price: "699",
-    description: "Unisex Baby Flannel Jumpsuit Panda Style Cosplay Clothes.",
+    // description: "Unisex Baby Flannel Jumpsuit Panda Style Cosplay Clothes.",
     image: "https://m.media-amazon.com/images/I/61kqhTCKtgL._AC_UL320_.jpg",
     incart: 0,
   },
@@ -85,7 +85,7 @@ let products = [
     id: "kids9",
     name: "Traditionals",
     price: "1349",
-    description: "Creation Boys' Black Cotton Blend Sherwani Style Kurta Set",
+    // description: "Creation Boys' Black Cotton Blend Sherwani Style Kurta Set",
     image: "https://m.media-amazon.com/images/I/61Tu7AD5tDL._UY550_.jpg",
     incart: 0,
   },
@@ -93,8 +93,7 @@ let products = [
     id: "kids10",
     name: "Romper",
     price: "1549",
-    description:
-      " Hopscotch Baby Boys Cotton and Spandex Half Sleeves Applique Bow Solid Romper in Blue Color",
+    // description: " Hopscotch Baby Boys Cotton and Spandex Half Sleeves Applique Bow Solid Romper in Blue Color",
     image: "https://m.media-amazon.com/images/I/61Eyv-MHHGL._UX679_.jpg",
     incart: 0,
   },
@@ -102,7 +101,7 @@ let products = [
     id: "kids11",
     name: "T-shirts",
     price: "700",
-    description: " woonie Baby Girl's Fit And Flare Frock Set with hat.",
+    // description: " woonie Baby Girl's Fit And Flare Frock Set with hat.",
     image: "https://m.media-amazon.com/images/I/31BZCo3lsSL.jpg",
     incart: 0,
   },
@@ -110,7 +109,7 @@ let products = [
     id: "kids12",
     name: "Frock",
     price: "711",
-    description: "Baby girls frock dress violet color, kneee-length.",
+    // description: "Baby girls frock dress violet color, kneee-length.",
     image: "https://m.media-amazon.com/images/I/7113XqJIZ9L._UX679_.jpg",
     incart: 0,
   },
@@ -154,6 +153,7 @@ for (let i = 0; i < carts.length; i++) {
   carts[i].addEventListener("click", (e) => {
     e.preventDefault();
     cartNumbers(products[i]);
+    totalCost(products[i]);
   });
 }
 
@@ -168,7 +168,7 @@ window.onload = function onLoadCartNumbers() {
 // Cart number updating in header
 // passing product as an argument to send a product in acrt
 function cartNumbers(product) {
-  console.log("product clicked is:", product);
+  // console.log("product clicked is:", product);
   let productNumbers = localStorage.getItem("cartCount");
   productNumbers = parseInt(productNumbers);
   if (productNumbers) {
@@ -178,4 +178,123 @@ function cartNumbers(product) {
     localStorage.setItem("cartCount", 1);
     document.querySelector(".cart span").innerHTML = 1;
   }
+  setItems(product);
 }
+
+function setItems(product) {
+  let cartItems = localStorage.getItem("productsInCart");
+  // JSON to javascript object
+  cartItems = JSON.parse(cartItems);
+  // console.log("My cart Items are", cartItems);
+  if (cartItems != null) {
+    if (cartItems[product.name] == undefined) {
+      cartItems = {
+        ...cartItems,
+        [product.name]: product,
+      };
+    }
+    cartItems[product.name].incart += 1;
+  } else {
+    product.incart = 1;
+    cartItems = {
+      [product.name]: product,
+    };
+  }
+
+  localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+}
+
+// Calculating Total cost
+function totalCost(product) {
+  // console.log("product price is: ", product.price)
+  let cartCost = localStorage.getItem("cartCost");
+  if (cartCost != null) {
+    cartCost = parseInt(cartCost);
+    localStorage.setItem(
+      "cartCost",
+      parseInt(cartCost) + parseInt(product.price)
+    );
+  } else {
+    localStorage.setItem("cartCost", product.price);
+  }
+}
+
+function displayCart() {
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+  let productContainer = document.querySelector(".items-row");
+  if (cartItems || items) {
+    productContainer.innerHTML = "";
+    Object.values(cartItems).map((items) => {
+      productContainer.innerHTML += `
+        <div class="items-row row">
+            <div class="innercols col">
+              <img
+                src=${items.image}
+                alt=""
+                class="cart-img"
+              />
+            </div>
+            <div class="innercols col">
+              <div class="product-info">
+                <h4>${items.name}</h4>
+                <h5 class="text-muted">₹ ${items.price}</h5>
+                <button>
+                  <i class="fas fa-trash-alt h4"></i>
+                </button>
+              </div>
+            </div>
+            <div class="innercols col">
+              <div class="">
+                <h4 class="q-text text-black">Quantity</h4>
+                <br />
+                <button class="" id="decrement" onclick="decrement()">-</button>
+                <input
+                  type="number"
+                  name=""
+                  id="quantity"
+                  value="${items.incart}"
+                  class="w-50"
+                />
+                <button class="" onclick="increment()">+</button>
+              </div>
+            </div>
+            <div class="innercols col">
+              <div class="product-info">
+                <h4 class="text-black">Total cost</h4>
+                <br />
+                <h5 class="total-cost text-black fw-bold p-2">₹ ${
+                  items.incart * items.price
+                }</h5>
+              </div>
+            </div>
+          </div>
+      `;
+    });
+  }
+
+  let total = document.querySelector(".basket");
+  total.innerHTML = `
+      <div class="card-body">
+                <div class="row">
+                  <div class="col cost">Sub-total</div>
+                  <div class="col cost-amt">₹ ${cartCost}</div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col shipping">Shipping</div>
+                  <div class="col shipping-amt">₹ 3000</div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col total fw-bold">Estimated Total</div>
+                  <div class="col total-amt fw-bold">₹ ${cartCost + 3000}</div>
+                </div>
+                <br />
+
+                <a href="#" class="btn fw-bold">Checkout</a>
+              </div>
+    `;
+}
+
+displayCart();
