@@ -14,13 +14,14 @@
 // }
 
 /* =========================== Cart Functionality============================ */
-let shopItemsData = [
+let products = [
   {
     id: "kids1",
     name: "Jacket",
     price: "599",
     description: "Black Kids Polyester Blend Winter Wear Jackets with cap.",
     image: "https://m.media-amazon.com/images/I/81TLGPPXpxL._AC_UL320_.jpg",
+    incart: 0,
   },
   {
     id: "kids2",
@@ -28,6 +29,7 @@ let shopItemsData = [
     price: "849",
     description: "Doodle Girl's Dress, Frock for Girls, Round Neck.",
     image: "https://m.media-amazon.com/images/I/71B+9RXeyoS._UY741_.jpg",
+    incart: 0,
   },
 
   {
@@ -37,6 +39,7 @@ let shopItemsData = [
     description: " Fashionably printed, bright color, regular fit, t-shirt.",
     image:
       "https://m.media-amazon.com/images/I/817qiPvaCKL._SY500._SX._UX._SY._UY_.jpg",
+    incart: 0,
   },
   {
     id: "kids4",
@@ -44,6 +47,7 @@ let shopItemsData = [
     price: "799",
     description: "Kids blue Cotton Printed Pyjama Set Pack of 1",
     image: "https://m.media-amazon.com/images/I/71C4Q55SQAL._AC_UL320_.jpg",
+    incart: 0,
   },
   {
     id: "kids5",
@@ -51,6 +55,7 @@ let shopItemsData = [
     price: "1499",
     description: "Curly Tale's girls cotton dress with 1 frock 1 jacket.",
     image: "https://m.media-amazon.com/images/I/818UbIhYbML._UX679_.jpg",
+    incart: 0,
   },
   {
     id: "kids6",
@@ -58,6 +63,7 @@ let shopItemsData = [
     price: "799",
     description: " Midi Type Dungaree with Denim Separate Hosiery T-shirt",
     image: "https://m.media-amazon.com/images/I/81P7ODspaJL._UY741_.jpg",
+    incart: 0,
   },
   {
     id: "kids7",
@@ -65,6 +71,7 @@ let shopItemsData = [
     price: "999",
     description: "Fashion Dream Girls Calf Length Pleated green Dress",
     image: "https://m.media-amazon.com/images/I/61UIDB6j96L._UY741_.jpg",
+    incart: 0,
   },
   {
     id: "kids8",
@@ -72,6 +79,7 @@ let shopItemsData = [
     price: "699",
     description: "Unisex Baby Flannel Jumpsuit Panda Style Cosplay Clothes.",
     image: "https://m.media-amazon.com/images/I/61kqhTCKtgL._AC_UL320_.jpg",
+    incart: 0,
   },
   {
     id: "kids9",
@@ -79,6 +87,7 @@ let shopItemsData = [
     price: "1349",
     description: "Creation Boys' Black Cotton Blend Sherwani Style Kurta Set",
     image: "https://m.media-amazon.com/images/I/61Tu7AD5tDL._UY550_.jpg",
+    incart: 0,
   },
   {
     id: "kids10",
@@ -87,6 +96,7 @@ let shopItemsData = [
     description:
       " Hopscotch Baby Boys Cotton and Spandex Half Sleeves Applique Bow Solid Romper in Blue Color",
     image: "https://m.media-amazon.com/images/I/61Eyv-MHHGL._UX679_.jpg",
+    incart: 0,
   },
   {
     id: "kids11",
@@ -94,6 +104,7 @@ let shopItemsData = [
     price: "700",
     description: " woonie Baby Girl's Fit And Flare Frock Set with hat.",
     image: "https://m.media-amazon.com/images/I/31BZCo3lsSL.jpg",
+    incart: 0,
   },
   {
     id: "kids12",
@@ -101,6 +112,7 @@ let shopItemsData = [
     price: "711",
     description: "Baby girls frock dress violet color, kneee-length.",
     image: "https://m.media-amazon.com/images/I/7113XqJIZ9L._UX679_.jpg",
+    incart: 0,
   },
 ];
 
@@ -137,6 +149,14 @@ let shopItemsData = [
 
 // generateShop();
 
+let carts = document.querySelectorAll(".add-cart");
+for (let i = 0; i < carts.length; i++) {
+  carts[i].addEventListener("click", (e) => {
+    e.preventDefault();
+    cartNumbers(products[i]);
+  });
+}
+
 // on loading the page cart items number in header should not be zero
 window.onload = function onLoadCartNumbers() {
   let productNumbers = localStorage.getItem("cartCount");
@@ -146,15 +166,9 @@ window.onload = function onLoadCartNumbers() {
 };
 
 // Cart number updating in header
-let carts = document.querySelectorAll(".add-cart");
-for (let i = 0; i < carts.length; i++) {
-  carts[i].addEventListener("click", (e) => {
-    e.preventDefault();
-    cartNumbers();
-  });
-}
-
-function cartNumbers() {
+// passing product as an argument to send a product in acrt
+function cartNumbers(product) {
+  console.log("product clicked is:", product);
   let productNumbers = localStorage.getItem("cartCount");
   productNumbers = parseInt(productNumbers);
   if (productNumbers) {
