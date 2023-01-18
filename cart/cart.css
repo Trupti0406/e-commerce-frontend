@@ -49,8 +49,8 @@ body {
 }
 
 .cart-img {
-  height: 180px;
-  width: 180px;
+  height: 170px;
+  /* width: 180px; */
 }
 .mainContainer button {
   background-color: #ffcc8a;
@@ -68,9 +68,13 @@ body {
   background-color: #ffcc8a;
 }
 
-.mainContainer .value {
+.mainContainer #quantity {
   /* border: 2px solid #f79210; */
   padding: 8px 25px;
   font-size: 14px;
   font-weight: bold;
+}
+
+.mainContainer .total{
+  font-size: 17px;
 }
