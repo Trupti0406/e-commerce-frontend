@@ -106,6 +106,10 @@ footer a {
   color: black;
 }
 
+h2 {
+  text-decoration: 3px #f79210 underline;
+}
+
 @media only screen and (max-width: 600px) {
   .banner-logo > img {
     width: 150px;

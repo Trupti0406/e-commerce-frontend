@@ -67,9 +67,7 @@ button:hover {
   font-size: 20px;
   border-bottom: 2px solid #f79210;
 }
-h2 {
-  text-decoration: 3px #f79210 underline;
-}
+
 
 @media only screen and (max-width: 900px) {
   button {

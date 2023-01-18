@@ -12,18 +12,3 @@ function increment(incdec) {
   var itemval = document.getElementById(incdec);
   itemval.value = parseInt(itemval.value) + 1;
 }
-
-/* =========================== Cart Functionality============================ */
-let carts = document.querySelectorAll(".add-cart");
-
-for (let i = 0; i < carts.length; i++) {
-  carts[i].addEventListener("click", (e) => {
-    e.preventDefault();
-  });
-}
-window.onload = function onLoadCartNumbers() {
-  let productNumbers = localStorage.getItem("cartNumbers");
-  if (productNumbers) {
-    document.querySelector(".cart span").textContent = productNumbers;
-  }
-};
