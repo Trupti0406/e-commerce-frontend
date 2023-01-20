@@ -9,6 +9,7 @@ var swiper = new Swiper(".slide-content", {
     prevEl: ".swiper-button-prev",
   },
 
+  // Responsiveness
   breakpoints: {
     0: {
       slidesPerView: 1,

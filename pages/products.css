@@ -73,6 +73,7 @@ button:hover {
   border-bottom: 2px solid #f79210;
 }
 
+/* Media queries */
 @media only screen and (max-width: 900px) {
   button {
     display: flex;

@@ -42,6 +42,8 @@ span {
   font-size: 10px;
   background-color: #febd69;
 }
+
+/* Media queries for Header */
 @media only screen and (max-width: 600px) {
   .form-control {
     width: 100%;
@@ -71,7 +73,7 @@ footer a {
   text-decoration: none;
 }
 
-/* =============== Home Page CSS =============== */
+/* =============== Home Banner CSS =============== */
 .banner-img {
   width: 100%;
   opacity: 0.3;
@@ -110,6 +112,7 @@ h2 {
   text-decoration: 3px #f79210 underline;
 }
 
+/* Media queries for Banner Container */
 @media only screen and (max-width: 600px) {
   .banner-logo > img {
     width: 150px;
@@ -134,6 +137,7 @@ h2 {
 .category-img:hover {
   transform: scale(1.1);
 }
+
 /* =============== Feautured Products =============== */
 .card {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -213,6 +217,7 @@ h2 {
   color: #f79210;
 }
 
+/* Media queries for Contact Us page */
 @media only screen and (max-width: 1000px) {
   .img-container {
     margin-bottom: 50px;
@@ -250,6 +255,8 @@ h2 {
 .login-form label {
   font-size: 18px;
 }
+
+/* Media queries for Login Page */
 @media only screen and (max-width: 600px) {
   .login-form {
     width: 350px;

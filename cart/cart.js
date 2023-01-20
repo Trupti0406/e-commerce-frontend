@@ -1,3 +1,4 @@
+// Item quantity increase / decrease functionality
 function decrement(incdec) {
   var itemval = document.getElementById(incdec);
   if (itemval.value <= 0) {
