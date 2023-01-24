@@ -16,7 +16,7 @@
 - __JQuery__ is used to make the header and footer dynamic.
 
 ## Description:
-It is the frontend part of theE-commerce application E-Store. The purpose of this project is just to create the UI(User Interface) with responsiveness for all devices i.e. (mobile, tablet, larger screens).
+It is the frontend part of the E-commerce application E-Store. The purpose of this project is just to create the UI(User Interface) with responsiveness for all devices i.e. (mobile, tablet, larger screens).
 
 ### This website has following pages:
 
