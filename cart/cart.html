@@ -55,88 +55,168 @@
           <div class="row">
             <h4 class="card-header fw-bolder px-2 py-3">Items in cart</h4>
           </div>
-          <div class="items-row row">
-            <div class="innercols col">
-              <img
-                src="https://m.media-amazon.com/images/I/61kqhTCKtgL._AC_UL320_.jpg"
-                alt=""
-                class="cart-img"
-              />
-            </div>
-            <div class="innercols col">
-              <div class="product-info">
-                <h4>Baby Flannel</h4>
-                <h5 class="text-muted">₹ 664</h5>
-                <button>
-                  Delete Item <i class="fas fa-trash-alt h6 mx-1"></i>
-                </button>
-              </div>
-            </div>
-            <div class="innercols col">
-              <div class="">
-                <h4 class="q-text text-black">Quantity</h4>
-                <br />
-                <button
-                  class=""
-                  id="decrement"
-                  onclick="decrement('quantity1')"
-                >
-                  -
-                </button>
-                <input
-                  type="number"
-                  name=""
-                  id="quantity1"
-                  value="0"
-                  class="w-25"
+          <div class="items-holder">
+            <div class="items-row row">
+              <div class="innercols col">
+                <img
+                  src="https://m.media-amazon.com/images/I/61kqhTCKtgL._AC_UL320_.jpg"
+                  alt=""
+                  class="cart-img"
                 />
-                <button class="" onclick="increment('quantity1')">+</button>
               </div>
-            </div>
-            <!-- <div class="innercols col">
+              <div class="innercols col">
+                <div class="product-info">
+                  <h4>Baby Flannel</h4>
+                  <h5 class="cart-price text-muted">₹ 664</h5>
+                  <button class="delete">
+                    Delete Item <i class="fas fa-trash-alt h6 mx-1"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="innercols col">
+                <div class="">
+                  <h4 class="q-text text-black">Quantity</h4>
+                  <br />
+                  <button
+                    class=""
+                    id="decrement"
+                    onclick="decrement('quantity1')"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    name=""
+                    id="quantity1"
+                    value="1"
+                    class="w-25"
+                  />
+                  <button class="" onclick="increment('quantity1')">+</button>
+                </div>
+              </div>
+              <!-- <div class="innercols col">
               <div class="product-info">
                 <h4 class="text-black">Total cost</h4>
                 <br />
                 <h5 class="total-cost text-black fw-bold p-2">$15</h5>
               </div>
             </div> -->
-          </div>
-          <div class="items-row row">
-            <div class="innercols col">
-              <img
-                src="https://m.media-amazon.com/images/I/41g-CD6FxyL.jpg"
-                alt=""
-                class="cart-img"
-              />
             </div>
-            <div class="innercols col">
-              <div class="product-info">
-                <h4>Velvet Top</h4>
-                <h5 class="text-muted">₹ 445</h5>
-                <button>
-                  Delete Item <i class="fas fa-trash-alt h6 mx-1"></i>
-                </button>
+            <div class="items-row row">
+              <div class="innercols col">
+                <img
+                  src="https://m.media-amazon.com/images/I/41g-CD6FxyL.jpg"
+                  alt=""
+                  class="cart-img"
+                />
+              </div>
+              <div class="innercols col">
+                <div class="product-info">
+                  <h4>Velvet Top</h4>
+                  <h5 class="cart-price text-muted">₹ 445</h5>
+                  <button class="delete">
+                    Delete Item <i class="fas fa-trash-alt h6 mx-1"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="innercols col">
+                <div class="">
+                  <h4 class="q-text text-black">Quantity</h4>
+                  <br />
+                  <button
+                    class=""
+                    id="decrement"
+                    onclick="decrement('quantity2')"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    name=""
+                    id="quantity2"
+                    value="1"
+                    class="w-25"
+                  />
+                  <button class="" onclick="increment('quantity2')">+</button>
+                </div>
               </div>
             </div>
-            <div class="innercols col">
-              <div class="">
-                <h4 class="q-text text-black">Quantity</h4>
-                <br />
-                <button
-                  class=""
-                  id="decrement"
-                  onclick="decrement('quantity2')"
-                >
-                  -
-                </button>
-                <input
-                  type="number"
-                  name=""
-                  id="quantity2"
-                  value="0"
-                  class="w-25"
+            <div class="items-row row">
+              <div class="innercols col">
+                <img
+                  src="https://m.media-amazon.com/images/I/61XnG8ZA3lL._AC_UL320_.jpg"
+                  alt=""
+                  class="cart-img"
                 />
-                <button class="" onclick="increment('quantity2')">+</button>
+              </div>
+              <div class="innercols col">
+                <div class="product-info">
+                  <h4>Floral Pink Dress</h4>
+                  <h5 class="cart-price text-muted">₹ 1439</h5>
+                  <button class="delete">
+                    Delete Item <i class="fas fa-trash-alt h6 mx-1"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="innercols col">
+                <div class="">
+                  <h4 class="q-text text-black">Quantity</h4>
+                  <br />
+                  <button
+                    class=""
+                    id="decrement"
+                    onclick="decrement('quantity3')"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    name=""
+                    id="quantity3"
+                    value="1"
+                    class="w-25"
+                  />
+                  <button class="" onclick="increment('quantity3')">+</button>
+                </div>
+              </div>
+            </div>
+            <div class="items-row row">
+              <div class="innercols col">
+                <img
+                  src="https://m.media-amazon.com/images/I/71cFpnm0b6S._AC_UL320_.jpg"
+                  alt=""
+                  class="cart-img"
+                />
+              </div>
+              <div class="innercols col">
+                <div class="product-info">
+                  <h4>Printed Shirt</h4>
+                  <h5 class="cart-price text-muted">₹ 1249</h5>
+                  <button class="delete">
+                    Delete Item <i class="fas fa-trash-alt h6 mx-1"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="innercols col">
+                <div class="">
+                  <h4 class="q-text text-black">Quantity</h4>
+                  <br />
+                  <button
+                    class=""
+                    id="decrement"
+                    onclick="decrement('quantity4')"
+                  >
+                    -
+                  </button>
+                  <input
+                    type="number"
+                    name=""
+                    id="quantity4"
+                    value="1"
+                    class="w-25"
+                  />
+                  <button class="" onclick="increment('quantity4')">+</button>
+                </div>
               </div>
             </div>
           </div>
@@ -148,17 +228,17 @@
             <div class="card-body">
               <div class="row">
                 <div class="col fw-bold cost">Sub-total</div>
-                <div class="col fw-bold cost-amt">₹ 1109</div>
+                <div class="col fw-bold cost-amt">₹ 3797</div>
               </div>
               <br />
               <div class="row">
                 <div class="col fw-bold text-muted">Shipping</div>
-                <div class="col fw-bold text-muted shipping-amt">₹ 300</div>
+                <div class="col fw-bold text-muted shipping-amt">₹ 0</div>
               </div>
               <hr />
               <div class="row">
                 <div class="col total fw-bold">Estimated Total</div>
-                <div class="col total total-amt fw-bold">₹ 1409</div>
+                <div class="col total total-amt fw-bold">₹ 4297</div>
               </div>
               <br />
 
