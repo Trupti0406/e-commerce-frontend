@@ -64,5 +64,3 @@ A login page that asks for the user’s E-mail and password.
 ### 7) Cart Page:
 
 A cart page that lists all the products which we have added to our cart, with a “+ and –” button to increase and decrease the product quantity and a delete button to delete the product from the cart.
-
-
